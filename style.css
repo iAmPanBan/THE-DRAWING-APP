@@ -1,0 +1,105 @@
+html,
+body {
+    margin: 0px;
+    height: 100%;
+    overflow: auto;
+}
+
+#sidebar {
+    grid-area: sidebar;
+    overflow: hidden;
+    width: 50px;
+    border: 2px solid grey;
+}
+
+#content {
+    grid-area: content;
+}
+
+.wrapper {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 70px 230px minmax(500px, 1fr);
+    grid-template-rows: 35px minmax(500px, 1fr) 160px;
+    grid-template-areas: "header header header" "sidebar content content" "colourP colourP options";
+    background-color: #fff;
+    color: #444;
+}
+
+.header {
+    grid-area: header;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(10, 10, 10);
+    border: 2px solid #fff;
+    margin-top: -10px;
+    padding-top: 10px;
+}
+
+.header button {
+    float: right;
+    background-color: aqua;
+    height: 28px;
+    font-size: 16px;
+    margin: 3px 20px 10px 0;
+}
+
+#clearButton {
+    background: red;
+    color: white;
+    border-radius: 10%;
+    padding: .5rem;
+}
+
+#saveImageButton {
+    background: green;
+    color: white;
+    border-radius: 10%;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.sideBarItem {
+    max-height: 40px;
+    max-width: 40px;
+    padding: 5px;
+}
+
+.sideBarItem img {
+    max-height: 40px;
+    max-Width: 40px;
+}
+
+.colourPalette {
+    grid-area: colourP;
+    display: flex;
+    flex-direction: grid;
+    flex-flow: wrap;
+    border: 2px solid grey;
+}
+
+.options {
+    grid-area: options;
+    padding: 15px;
+    border: 2px solid grey;
+}
+
+.colourSwatches {
+    box-sizing: border-box;
+    width: 35px;
+    height: 35px;
+    max-height: 35px;
+    max-width: 35px;
+    margin: 5px;
+    border-radius: 50%;
+}
+
+.box {
+    background-color: #333;
+    color: #fff;
+    font-size: 150%;
+    margin-bottom: -10px;
+}
